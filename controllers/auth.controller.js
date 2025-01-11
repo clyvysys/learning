@@ -12,7 +12,7 @@ exports.registerAdmin = async (req, res) => {
     // Check if user already exists
     const existingAdmin = await Admin.findOne({ username });
     if (existingAdmin) {
-      return res.status(400).json({ message: 'Admin with this username already exists' });
+      return res.status(400).json({ message: 'Admin with this username already exists.' });
     }
 
     // Hash the password
